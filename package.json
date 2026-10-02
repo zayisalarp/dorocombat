@@ -1,12 +1,19 @@
 {
-  "name": "combat-floating-arena",
+  "name": "dorocombat",
   "version": "1.0.0",
   "description": "Interactive website with floating animated GIF/AVIF background",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('public', {recursive:true}); ['index.html','style.css','script.js','4x.avif','preview.html'].forEach(f => fs.existsSync(f) && fs.copyFileSync(f, 'public/'+f));\"",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
-  "keywords": ["combat", "animated-gif", "floating-background"],
-  "author": "",
+  "keywords": [
+    "combat",
+    "animated-gif",
+    "battleground"
+  ],
+  "author": "zayisalarp",
   "license": "ISC"
 }
