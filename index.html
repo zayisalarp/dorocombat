@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat</title>
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- High-Performance Combat Canvas (Sparks, Hits, Dust) -->
+  <canvas id="combat-canvas" aria-hidden="true"></canvas>
+
+  <!-- Fighter Sprites Container -->
+  <div id="fighters-container" aria-label="Battleground"></div>
+
+  <!-- Sleek Minimalist Floating Top Bar -->
+  <header class="top-nav">
+    <div class="nav-inner">
+      <!-- Left: Clean Minimal Logo -->
+      <div class="nav-brand">
+        <span class="brand-glyph"></span>
+        <span class="brand-text">Combat</span>
+      </div>
+
+      <!-- Center: Minimal Match Score -->
+      <div class="match-score" title="Cyan vs Red Score">
+        <span class="score-team cyan">
+          <span class="team-dot cyan"></span>
+          <span id="score-cyan">0</span>
+        </span>
+        <span class="score-sep">:</span>
+        <span class="score-team red">
+          <span id="score-red">0</span>
+          <span class="team-dot red"></span>
+        </span>
+      </div>
+
+      <!-- Right: Minimalist Stats & Sound Toggle -->
+      <div class="nav-actions">
+        <span class="stat-item" id="fps-display" title="Frame rate">60 fps</span>
+        <span class="stat-divider">·</span>
+        <span class="stat-item" id="fighters-count" title="Active fighters">12 fighters</span>
+
+        <button class="sound-toggle-btn" id="sound-btn" aria-label="Toggle Sound Effects" title="Toggle audio">
+          <svg class="sound-icon" id="sound-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Muted Speaker Icon by default -->
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>

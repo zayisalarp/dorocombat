@@ -1,0 +1,12 @@
+{
+  "name": "combat-floating-arena",
+  "version": "1.0.0",
+  "description": "Interactive website with floating animated GIF/AVIF background",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["combat", "animated-gif", "floating-background"],
+  "author": "",
+  "license": "ISC"
+}
